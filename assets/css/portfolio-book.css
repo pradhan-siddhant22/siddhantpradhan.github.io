@@ -1,0 +1,694 @@
+/* Portfolio book — matches Minimal Mistakes / academicpages default_light theme.
+   Uses :root variables from main.css (--global-*). All rules scoped under .portfolio-book-wrap. */
+
+.portfolio-book-main#main {
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1280px) {
+  .portfolio-book-main#main {
+    max-width: 1280px;
+  }
+}
+
+.portfolio-book-wrap {
+  box-sizing: border-box;
+  /* Same typeface as the rest of the site (body / $global-font-family in main.scss) */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--global-text-color);
+  background: transparent;
+  width: 100%;
+  padding: 0 0 2em;
+  -webkit-font-smoothing: antialiased;
+  /* Local tokens derived from theme */
+  --pb-accent: var(--global-base-color);
+  --pb-accent-hover: var(--global-link-color-hover);
+  --pb-muted: var(--global-text-color-light);
+  --pb-bg: var(--global-bg-color);
+  --pb-bg-subtle: var(--global-thead-color);
+  --pb-border: var(--global-border-color);
+  --pb-border-strong: var(--global-dark-border-color);
+  --pb-code-bg: var(--global-code-background-color);
+  --pb-code-fg: var(--global-code-text-color);
+  --pb-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+
+.portfolio-book-wrap *,
+.portfolio-book-wrap *::before,
+.portfolio-book-wrap *::after {
+  box-sizing: border-box;
+}
+
+.portfolio-book-wrap .portfolio-container {
+  width: 100%;
+  max-width: 100%;
+  background: var(--pb-bg);
+  border: 1px solid var(--pb-border);
+  border-radius: 4px;
+  box-shadow: var(--pb-shadow);
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* Page variants + small spacing helpers */
+.portfolio-book-wrap .p-book-page--cover {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .portfolio-book-wrap .p-book-page--cover {
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+.portfolio-book-wrap .pb-mb-xs { margin-bottom: 0.5rem; }
+.portfolio-book-wrap .pb-mb-sm { margin-bottom: 0.6rem; }
+.portfolio-book-wrap .pb-mb-md { margin-bottom: 1rem; }
+.portfolio-book-wrap .p-book-page {
+  width: 100%;
+  padding: 2.25rem 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .portfolio-book-wrap .p-book-page {
+    padding: 2.75rem 3rem;
+  }
+}
+
+.portfolio-book-wrap .p-book-page:not(:last-child) {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--pb-border);
+  position: relative;
+}
+
+.portfolio-book-wrap .p-book-page:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pb-accent), transparent);
+  opacity: 0.35;
+}
+
+.portfolio-book-wrap .page-gap {
+  display: none;
+}
+
+/* Typography */
+.portfolio-book-wrap .proj-num {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--pb-accent);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+
+.portfolio-book-wrap .proj-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--global-text-color);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  border: none;
+}
+
+.portfolio-book-wrap .proj-sub {
+  font-size: 0.9375rem;
+  color: var(--pb-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  font-weight: 500;
+  border: none;
+}
+
+.portfolio-book-wrap .body-text {
+  font-size: 1rem;
+  color: var(--global-text-color);
+  line-height: 1.65;
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+  border: none;
+}
+
+.portfolio-book-wrap .section-head {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pb-accent);
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  border: none;
+}
+
+.portfolio-book-wrap .bullet,
+.portfolio-book-wrap p.bullet {
+  font-size: 0.9375rem;
+  color: var(--global-text-color);
+  line-height: 1.65;
+  padding-left: 1rem;
+  text-indent: -1rem;
+  margin-bottom: 0.35rem;
+  border: none;
+}
+
+.portfolio-book-wrap .bullet::before,
+.portfolio-book-wrap p.bullet::before {
+  content: "• ";
+  color: var(--pb-accent);
+  font-weight: 600;
+}
+
+.portfolio-book-wrap .caption {
+  font-size: 0.8125rem;
+  color: var(--pb-muted);
+  text-align: center;
+  margin-top: 0.35rem;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+  border: none;
+}
+
+.portfolio-book-wrap .small-grey {
+  font-size: 0.8125rem;
+  color: var(--pb-muted);
+  border: none;
+}
+
+.portfolio-book-wrap .gold-rule {
+  border: none;
+  border-top: 2px solid var(--pb-accent);
+  margin: 0.75rem 0 1rem;
+  opacity: 0.85;
+}
+
+.portfolio-book-wrap .rule-thin {
+  border: none;
+  border-top: 1px solid var(--pb-border-strong);
+  margin: 0.5rem 0 0.75rem;
+}
+
+/* Tags */
+.portfolio-book-wrap .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.portfolio-book-wrap .tag {
+  background: var(--pb-bg-subtle);
+  border: 1px solid var(--pb-border-strong);
+  border-radius: 4px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  color: var(--global-text-color);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.portfolio-book-wrap .tag:hover {
+  border-color: var(--pb-accent);
+  background: color-mix(in srgb, var(--pb-accent) 8%, var(--pb-bg));
+}
+
+/* Placeholders */
+.portfolio-book-wrap .img-placeholder {
+  background: linear-gradient(135deg, var(--pb-bg-subtle) 0%, var(--pb-bg) 100%);
+  border: 1px solid var(--pb-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pb-muted);
+  font-size: 0.8125rem;
+  font-style: italic;
+  border-radius: 4px;
+  min-height: 4rem;
+}
+
+.portfolio-book-wrap .img-placeholder:hover {
+  border-color: var(--pb-accent);
+}
+
+/* Natural aspect ratio — avoids cropping from fixed height + object-fit: cover */
+.portfolio-book-wrap .portfolio-hero-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--pb-border);
+  margin: 0 0 1rem;
+  display: block;
+  background: var(--pb-bg-subtle);
+}
+
+.portfolio-book-wrap .portfolio-thumb-img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  border: 1px solid var(--pb-border);
+  display: block;
+  background: var(--pb-bg-subtle);
+}
+
+.portfolio-book-wrap .portfolio-thumb-img--sm {
+  height: 70px;
+}
+
+/* Project page two-up photos (e.g. BeagleBone hardware + terminal) */
+.portfolio-book-wrap .portfolio-dual-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+  border: 1px solid var(--pb-border);
+  display: block;
+  background: var(--pb-bg-subtle);
+}
+
+/* Full-width diagram — natural height (no max-height) so labels stay readable */
+.portfolio-book-wrap .portfolio-arch-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid var(--pb-border);
+  display: block;
+  background: var(--pb-bg-subtle);
+}
+
+/* Data tables */
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 1rem 0;
+  border: 1px solid var(--pb-border);
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) th {
+  background: var(--pb-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  font-size: 0.75rem;
+  border: 1px solid var(--pb-border-strong);
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) td {
+  color: var(--global-text-color);
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--pb-border);
+  font-weight: 400;
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) tr:nth-child(odd) td {
+  background: var(--pb-bg);
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) tr:nth-child(even) td {
+  background: var(--pb-bg-subtle);
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table).plain-table td:first-child {
+  color: var(--pb-accent);
+  font-weight: 700;
+  background: var(--pb-bg-subtle);
+  font-size: 0.8125rem;
+}
+
+.portfolio-book-wrap table:not(.cover-idx):not(.arch-table) tr.highlight td {
+  background: color-mix(in srgb, var(--pb-accent) 14%, var(--pb-bg));
+  color: var(--global-text-color);
+  font-weight: 500;
+}
+
+/* Arch table */
+.portfolio-book-wrap .arch-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 1rem 0;
+  border: 1px solid var(--pb-border);
+}
+
+.portfolio-book-wrap .arch-table th {
+  background: var(--pb-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  text-transform: none;
+  font-size: 0.75rem;
+  border-bottom: 1px solid var(--pb-border-strong);
+}
+
+.portfolio-book-wrap .arch-table td {
+  color: var(--global-text-color);
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--pb-border);
+}
+
+.portfolio-book-wrap .arch-table tr:nth-child(odd) td {
+  background: var(--pb-bg);
+}
+
+.portfolio-book-wrap .arch-table tr:nth-child(even) td {
+  background: var(--pb-bg-subtle);
+}
+
+/* Stat boxes */
+.portfolio-book-wrap .stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.portfolio-book-wrap .stat-box {
+  flex: 1 1 120px;
+  background: var(--pb-bg-subtle);
+  border: 1px solid var(--pb-border);
+  padding: 1rem 0.65rem;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-book-wrap .stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pb-accent), transparent);
+  opacity: 0.5;
+}
+
+.portfolio-book-wrap .stat-box:hover {
+  border-color: var(--pb-accent);
+  box-shadow: var(--pb-shadow);
+}
+
+.portfolio-book-wrap .stat-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pb-accent);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  border: none;
+}
+
+.portfolio-book-wrap .stat-label {
+  font-size: 0.6875rem;
+  color: var(--pb-muted);
+  margin-top: 0.35rem;
+  white-space: pre-line;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  border: none;
+}
+
+/* Code */
+.portfolio-book-wrap .code-block {
+  background: var(--pb-code-bg);
+  border: 1px solid var(--pb-border);
+  border-left: 3px solid var(--pb-accent);
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.portfolio-book-wrap .code-block pre {
+  /* Match main.scss: code, kbd, samp, pre { font-family: $monospace } */
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 0.8125rem;
+  color: var(--pb-code-fg);
+  line-height: 1.6;
+  white-space: pre;
+  margin: 0;
+  font-weight: 500;
+  border: none;
+  overflow-x: auto;
+}
+
+/* Grid & cards */
+.portfolio-book-wrap .two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  .portfolio-book-wrap .two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portfolio-book-wrap .two-col-3 {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr;
+  gap: 0;
+}
+
+.portfolio-book-wrap .card {
+  background: var(--pb-bg-subtle);
+  border: 1px solid var(--pb-border);
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.portfolio-book-wrap .card:hover {
+  border-color: var(--pb-accent);
+}
+
+.portfolio-book-wrap .card-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--pb-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  border: none;
+}
+
+.portfolio-book-wrap .step-table {
+  width: 100%;
+  border: 1px solid var(--pb-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.portfolio-book-wrap .step-table td {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid var(--pb-border);
+  font-size: 0.8125rem;
+  vertical-align: top;
+}
+
+.portfolio-book-wrap .step-table td:first-child {
+  width: 120px;
+  color: var(--pb-accent);
+  font-weight: 700;
+  background: var(--pb-bg-subtle);
+  font-size: 0.75rem;
+}
+
+.portfolio-book-wrap .step-table td:last-child {
+  color: var(--global-text-color);
+  background: var(--pb-bg);
+}
+
+.portfolio-book-wrap .step-table tr:nth-child(even) td {
+  background: var(--pb-bg-subtle);
+}
+
+.portfolio-book-wrap .step-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Callouts & inline layout helpers (replace dark-theme inline styles in HTML) */
+.portfolio-book-wrap .pb-callout {
+  border: 1px solid var(--pb-border);
+  background: var(--pb-bg-subtle);
+  padding: 0.625rem 0.75rem;
+  border-radius: 4px;
+}
+.portfolio-book-wrap .pb-callout__title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 0.35rem;
+}
+.portfolio-book-wrap .pb-step-label {
+  color: var(--pb-accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.portfolio-book-wrap .pb-subsection-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  margin-bottom: 0.5rem;
+}
+.portfolio-book-wrap .pb-stack-sm {
+  margin-bottom: 0.6rem;
+}
+.portfolio-book-wrap .pb-stack-sm--loose {
+  margin-bottom: 1rem;
+}
+.portfolio-book-wrap .section-head--in-flow {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+}
+.portfolio-book-wrap .pb-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.375rem;
+  margin-bottom: 0.625rem;
+}
+.portfolio-book-wrap .pb-block-spaced {
+  margin-top: 1.25rem;
+}
+
+/* Cover */
+.portfolio-book-wrap .cover-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--global-text-color) 0%, var(--pb-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: none;
+}
+
+.portfolio-book-wrap .cover-sub {
+  font-size: 1.25rem;
+  color: var(--pb-muted);
+  text-align: center;
+  margin-top: 0.35rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: none;
+}
+
+.portfolio-book-wrap .cover-meta {
+  font-size: 0.875rem;
+  color: var(--pb-muted);
+  text-align: center;
+  margin-top: 1rem;
+  border: none;
+}
+
+.portfolio-book-wrap .cover-footer {
+  font-size: 0.8125rem;
+  color: var(--pb-muted);
+  text-align: center;
+  margin-top: auto;
+  padding-top: 2.5rem;
+  border: none;
+}
+
+.portfolio-book-wrap .cover-hr {
+  border: none;
+  border-top: 2px solid var(--pb-accent);
+  width: 70%;
+  margin: 1rem auto 1rem;
+  opacity: 0.85;
+}
+
+.portfolio-book-wrap .cover-idx {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 2rem;
+  border: 1px solid var(--pb-border-strong);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.portfolio-book-wrap .cover-idx td {
+  padding: 0.85rem 1rem;
+  border: none;
+  border-bottom: 1px solid var(--pb-border);
+  font-size: 0.9375rem;
+  vertical-align: middle;
+  color: var(--global-text-color);
+}
+
+.portfolio-book-wrap .cover-idx tr:last-child td {
+  border-bottom: none;
+}
+
+.portfolio-book-wrap .cover-idx tr:nth-child(even) td {
+  background: var(--pb-bg-subtle);
+}
+
+.portfolio-book-wrap .cover-idx tr:nth-child(odd) td {
+  background: var(--pb-bg);
+}
+
+.portfolio-book-wrap .cover-idx tr:hover td {
+  background: color-mix(in srgb, var(--pb-accent) 6%, var(--pb-bg));
+}
+
+.portfolio-book-wrap .cover-idx .idx-num {
+  color: var(--pb-accent);
+  font-weight: 800;
+  font-size: 1.125rem;
+  width: 50px;
+}
+
+.portfolio-book-wrap .cover-idx .idx-title {
+  color: var(--global-text-color);
+  font-weight: 600;
+  width: auto;
+  max-width: 340px;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-book-wrap .cover-idx .idx-dom {
+  color: var(--pb-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}

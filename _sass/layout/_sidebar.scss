@@ -154,12 +154,21 @@
   }
 
   img {
+    display: block;
     max-width: 175px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 28%;
     border-radius: 50%;
 
     @include breakpoint($large) {
+      width: 175px;
+      height: 175px;
+      max-width: 175px;
       padding: 5px;
       border: 1px solid var(--global-border-color);
+      box-sizing: border-box;
     }
   }
 }
@@ -319,6 +328,17 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    img.author__social-icon {
+      display: inline-block;
+      width: 1.35em;
+      height: 1.35em;
+      vertical-align: middle;
+      position: relative;
+      top: -0.06em;
+      left: 0.03em;
+      object-fit: contain;
     }
   }
 }

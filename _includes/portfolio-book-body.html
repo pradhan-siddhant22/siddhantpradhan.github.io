@@ -1,0 +1,431 @@
+{% include base_path %}
+<div class="portfolio-container">
+      
+      <div class="p-book-page p-book-page--cover">
+        <div class="cover-title">Siddhant Pradhan</div>
+        <div class="cover-sub">Portfolio</div>
+        <hr class="cover-hr" />
+        <div class="cover-meta"></div>
+
+        <table class="cover-idx">
+          <tbody>
+            <tr>
+              <td class="idx-num">1</td>
+              <td class="idx-title">Tiny PC</td>
+              <td class="idx-dom">Hardware · PCB · 3D Printing</td>
+            </tr>
+            <tr>
+              <td class="idx-num">2</td>
+              <td class="idx-title">Multithreaded PWM Timestamping System</td>
+              <td class="idx-dom">Firmware · Embedded C · BeagleBone</td>
+            </tr>
+            <tr>
+              <td class="idx-num">3</td>
+              <td class="idx-title">Network Topology Analysis &amp; Routing</td>
+              <td class="idx-dom">Algorithms · Networking · Python</td>
+            </tr>
+            <tr>
+              <td class="idx-num">4</td>
+              <td class="idx-title">Microgrid Energy Consumption Prediction</td>
+              <td class="idx-dom">Machine Learning · Scikit-Learn</td>
+            </tr>
+            <tr>
+              <td class="idx-num">5</td>
+              <td class="idx-title">Timing Side-Channel Attack &amp; Defense</td>
+              <td class="idx-dom">Cybersecurity · Python · Raspberry Pi 5</td>
+            </tr>
+            <tr>
+              <td class="idx-num">6</td>
+              <td class="idx-title">Video Capture &amp; Image Processing — DE1-SoC</td>
+              <td class="idx-dom">FPGA · ARM Cortex-A9 · Embedded Vision</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cover-footer"></div>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 1</div>
+        <div class="proj-title">Tiny PC</div>
+        <div class="proj-sub"></div>
+
+        <img class="portfolio-hero-img" src="{{ base_path }}/images/tiny-pc-hero.png" alt="Tiny PC — miniature retro-style desktop with monitor displaying Windows XP Bliss wallpaper" loading="eager" decoding="async" />
+
+        <p class="body-text">A fully functional miniature PC inspired by the classic computers of the 1990s and early 2000s. Combines 3D printing, custom PCB soldering, and software configuration into a palm-sized retro machine powered by a Raspberry Pi 4.</p>
+
+        <div class="tag-row">
+          <span class="tag">3D Printing</span><span class="tag">PCB Soldering</span><span class="tag">CAD / Fusion 360</span><span class="tag">Electronics</span><span class="tag">Raspberry Pi</span><span class="tag">Retro Design</span>
+        </div>
+
+        <h2 class="section-head section-head--in-flow">Design &amp; Build Process</h2>
+        <hr class="gold-rule" />
+
+        <div class="two-col">
+          <div>
+            <div class="pb-stack-sm">
+              <div class="pb-step-label">1. Design</div>
+              <p class="body-text">Downloaded STL files and studied the layout to plan how all enclosure parts interconnect.</p>
+            </div>
+            <div class="pb-stack-sm">
+              <div class="pb-step-label">2. 3D Print</div>
+              <p class="body-text">Printed all parts at 50-micron resolution using ABS filament for strength and fine detail.</p>
+            </div>
+            <div class="pb-stack-sm">
+              <div class="pb-step-label">3. Electronics</div>
+              <p class="body-text">Soldered SMD components on a custom add-on PCB using a hot plate, including a USB-C port.</p>
+            </div>
+            <div class="pb-stack-sm">
+              <div class="pb-step-label">4. Display &amp; Audio</div>
+              <p class="body-text">Wired a 4-inch Waveshare screen via HDMI and connected speakers with JST-PH connectors.</p>
+            </div>
+            <div class="pb-stack-sm">
+              <div class="pb-step-label">5. Software</div>
+              <p class="body-text">Installed Twister OS and configured screen overlays, GPIO LEDs, and PWM fan control.</p>
+            </div>
+            <div class="pb-stack-sm--loose">
+              <div class="pb-step-label">6. Assembly</div>
+              <p class="body-text">Mounted screen to bezel, secured Pi with heatsink, routed cables, and added rubber feet.</p>
+            </div>
+
+            <div class="pb-callout">
+              <div class="pb-callout__title">Key Components</div>
+              <p class="bullet">Raspberry Pi 4</p>
+              <p class="bullet">4" Waveshare Screen</p>
+              <p class="bullet">Custom Add-on PCB</p>
+              <p class="bullet">PWM Heatsink + Fan</p>
+              <p class="bullet">15W USB-C Power Supply</p>
+              <p class="bullet">ABS 3D-Printed Enclosure</p>
+              <p class="bullet">Twister OS</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="pb-subsection-title">3D-Printed Parts</div>
+            <div class="pb-mini-grid">
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-bottom-case.png" alt="CAD render: Tiny PC bottom case" loading="lazy" decoding="async" />
+                <div class="caption">Bottom Case</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-back-shell.png" alt="CAD render: Tiny PC back shell" loading="lazy" decoding="async" />
+                <div class="caption">Back Shell</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-screen-base.png" alt="CAD render: Tiny PC screen base" loading="lazy" decoding="async" />
+                <div class="caption">Screen Base</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-screen-core.png" alt="CAD render: Tiny PC screen core" loading="lazy" decoding="async" />
+                <div class="caption">Screen Core</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-top-cover.png" alt="CAD render: Tiny PC top cover with fan vent" loading="lazy" decoding="async" />
+                <div class="caption">Top Cover</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img" src="{{ base_path }}/images/tiny-pc-part-front-bezel.png" alt="CAD render: Tiny PC front bezel" loading="lazy" decoding="async" />
+                <div class="caption">Front Bezel</div>
+              </div>
+            </div>
+
+            <div class="pb-subsection-title">Custom PCBs</div>
+            <div class="pb-mini-grid">
+              <div>
+                <img class="portfolio-thumb-img portfolio-thumb-img--sm" src="{{ base_path }}/images/tiny-pc-pcb-rpi-addon.png" alt="RPi4 add-on PCB top and bottom views" loading="lazy" decoding="async" />
+                <div class="caption">RPi4 Add-on</div>
+              </div>
+              <div>
+                <img class="portfolio-thumb-img portfolio-thumb-img--sm" src="{{ base_path }}/images/tiny-pc-pcb-microsd-adapter.png" alt="MicroSD adapter PCB top and bottom views" loading="lazy" decoding="async" />
+                <div class="caption">MicroSD Adapter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-block-spaced">
+          <div class="pb-subsection-title">System Architecture</div>
+          <img class="portfolio-arch-img" src="{{ base_path }}/images/tiny-pc-system-architecture.png" alt="System architecture diagram: Raspberry Pi 4, peripherals, and add-on PCB" loading="lazy" decoding="async" />
+        </div>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 2</div>
+        <div class="proj-title">Multithreaded PWM<br/>Timestamping System</div>
+        <div class="proj-sub">Firmware — BeagleBone Black · Embedded C · pthreads · epoll · GPIO</div>
+        <hr class="gold-rule" />
+
+        <p class="body-text">An event-driven embedded system built on the BeagleBone Black that captures 50 GPIO interrupt timestamps generated by an external PWM signal — without continuous polling. A producer thread waits on epoll for rising-edge interrupts and logs nanosecond timestamps into a mutex-protected shared buffer; a consumer thread writes all 50 records to disk and the terminal on completion.</p>
+
+        <div class="tag-row">
+          <span class="tag">Embedded C</span><span class="tag">BeagleBone Black</span><span class="tag">pthreads</span><span class="tag">epoll</span><span class="tag">GPIO interrupts</span><span class="tag">Mutex</span><span class="tag">PWM</span><span class="tag">POSIX</span>
+        </div>
+
+        <div class="two-col pb-mb-xs">
+          <div>
+            <img class="portfolio-dual-img" src="{{ base_path }}/images/beaglebone-black-hardware.png" alt="BeagleBone Black with jumper wire on P8/P9 headers and USB power" loading="lazy" decoding="async" />
+          </div>
+          <div>
+            <img class="portfolio-dual-img" src="{{ base_path }}/images/beaglebone-pwm-terminal.png" alt="Terminal: PWM interrupt timestamps and data collection complete" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="caption">BeagleBone Black — P8/P9 jumper wire connects PWM out to GPIO in</div>
+          <div class="caption">Terminal: 50 timestamped interrupt events captured</div>
+        </div>
+
+        <div class="section-head">System Design</div>
+        <hr class="rule-thin" />
+        <p class="body-text">Two POSIX threads share a fixed-size buffer (SIZE=50) protected by a single pthread_mutex_t. The input thread configures P8_09 as a rising-edge GPIO interrupt via the sysfs interface and Linux epoll, then blocks on epoll_wait(). On each interrupt it acquires the mutex, writes clock_gettime(CLOCK_MONOTONIC) and pthread_self() into the buffer, and releases. The output thread sleeps 100ms per iteration until all 50 samples are collected, then writes every record to both stdout and a named text file.</p>
+
+        <div class="section-head">Code Highlight — Interrupt Capture Loop</div>
+        <hr class="rule-thin" />
+        <div class="code-block"><pre>while (bufferindex &lt; SIZE) {
+    epoll_wait(epfd, &amp;ev_wait, 1, -1);        // block — no CPU polling
+    clock_gettime(CLOCK_MONOTONIC, &amp;tm);      // nanosecond timestamp
+    pthread_mutex_lock(&amp;lock);
+    buffer[bufferindex].timestamp = tm;
+    buffer[bufferindex].thread_id = pthread_self();
+    bufferindex++;
+    pthread_mutex_unlock(&amp;lock);
+}</pre></div>
+
+        <div class="section-head">Software Stack</div>
+        <hr class="rule-thin" />
+        <table class="plain-table">
+          <tbody>
+            <tr><td>Language</td><td>Bare-metal C (gcc)</td></tr>
+            <tr><td>Threading</td><td>POSIX pthreads — producer / consumer pattern</td></tr>
+            <tr><td>Interrupt</td><td>Linux epoll + sysfs GPIO edge trigger</td></tr>
+            <tr><td>Timing</td><td>clock_gettime(CLOCK_MONOTONIC) — nanosecond resolution</td></tr>
+            <tr><td>Sync</td><td>pthread_mutex_t protecting shared buffer writes</td></tr>
+            <tr><td>Output</td><td>fprintf to named file + printf to terminal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 3</div>
+        <div class="proj-title">Network Topology<br/>Analysis &amp; Routing</div>
+        <div class="proj-sub">Algorithms — Python · Dijkstra · BFS/DFS · Prim MST · OSPF Simulation</div>
+        <hr class="gold-rule" />
+
+        <p class="body-text">Graph-based analysis of six real-world Internet Service Provider networks using the RocketFuel dataset. Models router connections and weighted links, implements multiple routing algorithms to simulate OSPF forwarding behaviour, constructs minimum spanning trees, finds minimum-cost forwarding paths, optimises for minimum maximum-weight links, and detects routing loops.</p>
+
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Graph Algorithms</span><span class="tag">Dijkstra</span><span class="tag">BFS / DFS</span><span class="tag">Prim MST</span><span class="tag">Bellman-Ford</span><span class="tag">OSPF</span><span class="tag">RocketFuel Dataset</span>
+        </div>
+
+        <img class="portfolio-arch-img" src="{{ base_path }}/images/network-isp-dijkstra.png" alt="ISP network topology from RocketFuel dataset: Dijkstra shortest path R1→R2→R3→R4 (cost 16) highlighted in gold" loading="lazy" decoding="async" />
+        <div class="caption">ISP router network — gold path shows Dijkstra shortest-path result (R1→R2→R3→R4, cost 16)</div>
+
+        <div class="section-head">Algorithms Implemented</div>
+        <hr class="rule-thin" />
+        <table>
+          <thead>
+            <tr><th>Algorithm</th><th>Task</th><th>Data Structure</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>BFS</td><td>pathExist() — reachability within N hops</td><td>Queue + visited set</td></tr>
+            <tr><td>Prim's MST</td><td>buildMST() — min spanning tree from source</td><td>Priority queue (min-heap)</td></tr>
+            <tr><td>Dijkstra</td><td>findPath() — shortest path on MST</td><td>Priority queue + relaxation</td></tr>
+            <tr><td>Bellman-Ford</td><td>findForwardingPath() — min-cost with cost out</td><td>Distance + predecessor arrays</td></tr>
+            <tr><td>Modified Dijkstra</td><td>findPathMaxWeight() — minimise max edge weight</td><td>Max-weight tracking per vertex</td></tr>
+            <tr><td>BFS loop detect</td><td>checkLoop() — detect routing loops</td><td>Visited set per BFS root</td></tr>
+          </tbody>
+        </table>
+
+        <div class="section-head">Code Highlight — Dijkstra on MST</div>
+        <hr class="rule-thin" />
+        <div class="code-block"><pre>def findPath(self, router1, router2):
+    start = self.MST.getVertex(router1)
+    start.setDistance(0)
+    pq.buildHeap([(v.getDistance(), v) for v in self.MST])
+    while not pq.isEmpty():
+        current = pq.delMin()
+        if current == end: break
+        for nxt in current.getConnections():
+            newDist = current.getDistance() + current.getWeight(nxt)
+            if newDist &lt; nxt.getDistance():
+                nxt.setDistance(newDist)
+                pq.decreaseKey(nxt, newDist)   # O(log n)</pre></div>
+
+        <div class="stat-row">
+          
+          
+          
+        </div>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 4</div>
+        <div class="proj-title">Microgrid Energy<br/>Consumption Prediction</div>
+        <div class="proj-sub">Machine Learning — Scikit-Learn · Python · Real-World Energy Dataset</div>
+        <hr class="gold-rule" />
+
+        <p class="body-text">A regression-based ML pipeline predicting smart microgrid energy consumption from a 3,449-sample real-world dataset combining weather variables with power generation and consumption readings (Liège smart grid). Engineered time-of-day and cloud-coverage features, trained and compared Linear Regression, Random Forest, and SVM regressors, and applied GridSearchCV with 5-fold cross-validation for hyperparameter tuning.</p>
+
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Scikit-Learn</span><span class="tag">Random Forest</span><span class="tag">SVM</span><span class="tag">GridSearchCV</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
+        </div>
+
+        <img class="portfolio-arch-img" src="{{ base_path }}/images/microgrid-test-rmse.png" alt="Bar chart: test RMSE comparison for microgrid energy prediction models (Lin Reg, Random Forest, SVM, GridSearchCV)" loading="lazy" decoding="async" />
+        <div class="caption">Test RMSE comparison — Random Forest achieves best generalisation at 0.0238</div>
+
+        <div class="section-head">Feature Engineering</div>
+        <hr class="rule-thin" />
+        <p class="bullet">Converted time column to minutes-since-midnight (continuous numeric feature)</p>
+        <p class="bullet">Engineered 'clouds' = max(CD, CM, CU) across three cloud-coverage columns</p>
+        <p class="bullet">Dropped correlated/redundant columns (date, time, CD, CM, CU, SNOW) post-analysis</p>
+        <p class="bullet">StandardScaler normalisation applied via Scikit-Learn Pipeline before model training</p>
+
+        <div class="section-head">Model Results</div>
+        <hr class="rule-thin" />
+        <table>
+          <thead>
+            <tr><th>Model</th><th>Train RMSE</th><th>Test RMSE</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Linear Regression</td><td>0.0368</td><td>0.0343</td><td>Consistent — no overfitting</td></tr>
+            <tr class="highlight"><td>Random Forest</td><td>0.0089</td><td>0.0238</td><td>Best test generalisation</td></tr>
+            <tr><td>SVM (linear)</td><td>0.0662</td><td>0.0660</td><td>Weakest overall</td></tr>
+            <tr><td>GridSearchCV (RF tuned)</td><td>~0.0</td><td>0.0254</td><td>Near-zero train — overfitting signal</td></tr>
+          </tbody>
+        </table>
+
+        <div class="section-head">Key Observations</div>
+        <hr class="rule-thin" />
+        <p class="bullet">SWD (solar irradiance) and generation show near-linear correlation — strongest predictive feature</p>
+        <p class="bullet">Consumption peaks at midday, validating the minutes-since-midnight engineered feature</p>
+        <p class="bullet">Random Forest achieves best test RMSE (0.0238) without explicit hyperparameter tuning</p>
+        <p class="bullet">GridSearchCV near-zero training RMSE (2.7e-12) confirms overfitting without bootstrap sampling</p>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 5</div>
+        <div class="proj-title">Timing Side-Channel<br/>Attack &amp; Defense</div>
+        <div class="proj-sub">Cybersecurity — Python · Raspberry Pi 5 · Statistical Timing Analysis</div>
+        <hr class="gold-rule" />
+
+        <p class="body-text">Full offensive and defensive timing side-channel study on a Raspberry Pi 5. A vulnerable password-check server leaks timing through early-exit byte comparison. A custom attacker recovers the secret password byte-by-byte using statistical timing measurements. Three mitigation strategies were designed, implemented, and evaluated in a hardened server version.</p>
+
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Timing Attack</span><span class="tag">Side-Channel</span><span class="tag">Unix Sockets</span><span class="tag">Statistical Analysis</span><span class="tag">Raspberry Pi 5</span><span class="tag">Trimmed Mean</span><span class="tag">Constant-Time</span>
+        </div>
+
+        <img class="portfolio-arch-img" src="{{ base_path }}/images/timing-attack-terminal-recovery.png" alt="Terminal output: attacker.py recovering password byte-by-byte; final recovered password b'S3cret!'" loading="lazy" decoding="async" />
+        <div class="caption">Password b'S3cret!' recovered byte-by-byte in 5 trials on Raspberry Pi 5</div>
+
+        <img class="portfolio-arch-img" src="{{ base_path }}/images/timing-attack-success-rate.png" alt="Plot: timing attack success rate versus trial count" loading="lazy" decoding="async" />
+        <div class="caption">Success rate reaches 100% at trial 5 — Pi's light OS load yields far less timing noise than a laptop</div>
+
+        <div class="section-head">Attack Design</div>
+        <hr class="rule-thin" />
+        <p class="bullet">measure(candidate): opens Unix socket, sends candidate, records 120 round-trip times using time.perf_counter_ns(), applies trimmed mean (drop top/bottom 10%) to filter OS scheduling jitter</p>
+        <p class="bullet">recover(): builds password byte-by-byte — character with longest average RTT indicates most correct prefix bytes matched so far</p>
+        <p class="bullet">100% success at just 5 trials on Raspberry Pi 5 vs. 50+ needed on a standard laptop due to lighter background process load and more predictable scheduling</p>
+
+        <div class="section-head">Mitigation Strategies</div>
+        <hr class="rule-thin" />
+        <table>
+          <thead>
+            <tr><th>Defense</th><th>Mechanism</th><th>Effectiveness</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Constant-Time Comparison</td><td>XOR/OR all bytes regardless of match — no early exit</td><td>Complete</td></tr>
+            <tr><td>Fixed Timing Padding</td><td>Wait until 10ms has elapsed before responding</td><td>Complete</td></tr>
+            <tr><td>Random Delay Injection</td><td>Add random 0–5ms noise after constant-time compare</td><td>Strong</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="page-gap"></div>
+
+      
+      <div class="p-book-page">
+        <div class="proj-num">Project 6</div>
+        <div class="proj-title">Video Capture &amp;<br/>Image Processing — DE1-SoC</div>
+        <div class="proj-sub">Embedded Systems — ARM Cortex-A9 · Cyclone V FPGA · C · Memory-Mapped I/O</div>
+        <hr class="gold-rule" />
+
+        <p class="body-text">A real-time software image processing system on the Altera DE1-SoC, integrating an ARM Cortex-A9 video pipeline with the FPGA video subsystem to stream, freeze, and process 320×240 RGB565 frames from a D5M camera module displayed on a VGA monitor. All image processing routines were implemented in bare-metal C using memory-mapped I/O from Linux user space.</p>
+
+        <div class="tag-row">
+          <span class="tag">ARM Cortex-A9</span><span class="tag">Cyclone V FPGA</span><span class="tag">Bare-Metal C</span><span class="tag">mmap()</span><span class="tag">MMIO</span><span class="tag">VGA</span><span class="tag">D5M Camera</span><span class="tag">RGB565</span>
+        </div>
+
+                <div class="pb-block-spaced">
+          <div class="pb-subsection-title">Setup</div>
+          <img class="portfolio-arch-img" src="{{ base_path }}/images/de1-soc-setup.png" alt="DE1-SoC video pipeline setup: PC connected over USB, DE1-SoC board, D5M camera, VGA monitor" loading="lazy" decoding="async" />
+          <div class="caption">Setup</div>
+        </div>
+
+<div class="section-head">System Architecture — Design Flow</div>
+        <hr class="rule-thin" />
+        <table class="arch-table">
+          <thead>
+            <tr><th style="width: 40px">Stage</th><th>Component</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>D5M Camera Module</td><td>Streams raw 5MP frames via TRDB-D5M interface</td></tr>
+            <tr><td>2</td><td>Video-In Clipper (FPGA)</td><td>Down-samples to 320×240 — QSYS IP core</td></tr>
+            <tr><td>3</td><td>Video-In DMA (FPGA)</td><td>Writes RGB565 frames to on-chip memory</td></tr>
+            <tr><td>4</td><td>ARM HPS (C code)</td><td>Reads frames via mmap() / /dev/mem from user space</td></tr>
+            <tr><td>5</td><td>Image Processing (C)</td><td>Applies selected filter: flip, BW threshold, invert</td></tr>
+            <tr><td>6</td><td>Pixel Buffer DMA (FPGA)</td><td>Sends processed frame to VGA controller</td></tr>
+            <tr><td>7</td><td>VGA Controller (FPGA)</td><td>Displays 320×240 output on external monitor</td></tr>
+          </tbody>
+        </table>
+
+        <div class="section-head">Image Processing Routines</div>
+        <hr class="rule-thin" />
+        <div class="two-col pb-mb-sm">
+          <div class="card">
+            <div class="card-title">Vertical Flip</div>
+            <p class="body-text">Swap row i with row (H-1-i) across all columns; iterate over half the frame height.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Horizontal Flip</div>
+            <p class="body-text">Swap pixel (r,c) with pixel (r, W-1-c) in-place within each row.</p>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">B&amp;W Threshold</div>
+            <p class="body-text">Convert RGB565 to luminance. Set pixel white if above threshold, black otherwise.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">Pixel Inversion</div>
+            <p class="body-text">XOR each RGB565 pixel with 0xFFFF to invert all colour channels simultaneously.</p>
+          </div>
+        </div>
+
+        <div class="section-head">Code Highlight — Memory-Mapped Frame Access</div>
+        <hr class="rule-thin" />
+        <div class="code-block"><pre>// Map FPGA pixel buffer into ARM user-space virtual memory
+int fd = open("/dev/mem", O_RDWR | O_SYNC);
+volatile uint16_t *pixel_buf = mmap(NULL, BUF_SIZE,
+    PROT_READ | PROT_WRITE, MAP_SHARED, fd, PIXEL_BUF_BASE);
+
+// Capture frame — 512-word hardware stride (not 320)
+for (int row = 0; row &lt; 240; row++)
+    for (int col = 0; col &lt; 320; col++)
+        frame[row][col] = pixel_buf[row * 512 + col];</pre></div>
+
+        <div class="stat-row">
+          
+          
+          
+          <div class="stat-box"><div class="stat-num">ARM+FPGA</div><div class="stat-label">Co-Design</div></div>
+        </div>
+      </div>
+    </div>

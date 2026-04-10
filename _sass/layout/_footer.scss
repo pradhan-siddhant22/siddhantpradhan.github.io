@@ -58,8 +58,22 @@
 }
 
 .page__footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5em;
   font-family: $global-font-family;
   font-size: $type-size-7;
+
+  .page__footer-copyright-left {
+    flex-shrink: 0;
+  }
+
+  .page__footer-copyright-right {
+    margin-left: auto;
+    text-align: right;
+  }
 }
 
 .page__footer-follow {

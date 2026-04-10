@@ -10,6 +10,11 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  // Force light theme - remove dark theme attribute before CSS loads
+  document.documentElement.removeAttribute('data-theme');
+  // Ensure light theme CSS variables are set immediately
+  document.documentElement.style.setProperty('--global-bg-color', '#fff');
+  document.documentElement.style.setProperty('--global-text-color', '#3d4144');
 </script>
 
 <!-- For all browsers -->
